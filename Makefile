@@ -7,5 +7,8 @@ up:
 down:
 	docker-compose down
 
+migrate:
+	docker-compose exec app php artisan migrate
+
 coverage:
-	docker exec -it Jadu_php-fpm ./vendor/bin/pest --coverage
+	docker exec -it php-fpm ./vendor/bin/pest --coverage
